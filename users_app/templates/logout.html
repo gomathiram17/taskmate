@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Logged Out - taskmate</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+</br>
+<h4>Logout on TaskMate! Thank you for choosing taskMate</h4>
+{% if messages %}
+
+      {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+              {{message}}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+      {% endfor %}
+{% endif %}
+
+</div>
+{% endblock content %}
